@@ -1,0 +1,9 @@
+@import '@assets/styles/abstracts';
+
+.daily_progress_container {
+  height: 100%;
+  border-radius: 12px;
+  flex: 1;
+  border: 1px dashed #ededed;
+  padding: 16px;
+}

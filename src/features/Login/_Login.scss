@@ -1,0 +1,148 @@
+@import '@assets/styles/abstracts';
+
+.auth_container {
+  background: linear-gradient(146deg, #fff 23.94%, #cce4ff 121.65%);
+  min-height: 100vh;
+  height: 100%;
+  .auth_header {
+    @include flexbox(row, space-between, center);
+    height: 111px;
+    padding: 10px 32px;
+  }
+  .auth_sections {
+    @include flexbox(row, center, unset);
+    padding: 10px 30px;
+    .auth_first_section {
+      width: 50%;
+      @include flexbox(row, center, unset);
+      > div {
+        max-width: 550px;
+        width: 100%;
+        @include flexbox(column, unset, unset);
+        gap: 32px;
+        .welcome_desc {
+          @include flexbox(column, center, center);
+          gap: 16px;
+          margin-bottom: 16px;
+          .welcome_back {
+            color: #152d48;
+            font-size: 42px;
+            font-weight: 600;
+            text-align: center;
+          }
+          .description {
+            color: $text-color;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+          }
+          @media screen and (max-width: 500px) {
+            gap: 10px;
+            .welcome_back {
+              font-size: 25px;
+            }
+            .description {
+              font-size: 15px;
+            }
+          }
+        }
+        .googel_auth {
+          width: 100%;
+          @include flexbox(row, center, center);
+          gap: 12px;
+          padding: 16px;
+          border-radius: 10px;
+          border: 1px solid #0078ff;
+          background: inherit;
+          .googel_auth_logo {
+            width: 30px;
+            height: 30px;
+          }
+          .googel_auth_label {
+            color: #0078ff;
+            font-size: 20px;
+            font-weight: 400;
+          }
+          .googel_auth_next_icon {
+            width: 23px;
+            height: 20px;
+          }
+          @media screen and (max-width: 500px) {
+            padding: 14px;
+            .googel_auth_logo {
+              width: 25px;
+              height: 25px;
+            }
+            .googel_auth_label {
+              display: none;
+            }
+            .googel_auth_next_icon {
+              display: none;
+            }
+          }
+        }
+        .auth_or_second_methode {
+          @include flexbox(row, center, center);
+          gap: 20px;
+          .auth_or_second_methode_ligne_1 {
+            width: 100%;
+            border-top: 1px solid $text-color;
+          }
+          .auth_or_second_methode_label {
+            color: $text-color;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            white-space: nowrap;
+            text-align: center;
+            @media screen and (max-width: 500px) {
+              font-size: 15px;
+            }
+          }
+          .auth_or_second_methode_ligne_2 {
+            width: 100%;
+            border-top: 1px solid $text-color;
+          }
+          @media screen and (max-width: 400px) {
+            .auth_or_second_methode_ligne_1 {
+              display: none;
+            }
+            .auth_or_second_methode_label {
+              white-space: normal;
+            }
+            .auth_or_second_methode_ligne_2 {
+              display: none;
+            }
+          }
+        }
+        > div {
+          .auth_input_email {
+            margin-bottom: 24px;
+          }
+        }
+        .forgot_password {
+          @include flexbox(row, flex-end, unset);
+          color: #000;
+          margin-top: 10px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+    }
+    .auth_second_section {
+      width: 50%;
+      @include flexbox(row, center, center);
+      .bg_section2 {
+        width: 570px;
+        height: 470px;
+      }
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+}

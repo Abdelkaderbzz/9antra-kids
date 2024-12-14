@@ -1,0 +1,16 @@
+@import '@assets/styles/abstracts';
+
+.accordion-container {
+  width: 100%;
+  .ant-collapse-header {
+    display: flex;
+    align-items: center !important;
+  }
+
+  border-radius: 10px;
+  background: #ebf5ff;
+}
+
+.accordion-active {
+  box-shadow: 4px 4px 4px 2px #f2f8ff;
+}

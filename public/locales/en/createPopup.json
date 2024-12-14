@@ -1,0 +1,66 @@
+{
+  "controls": {
+    "setlive": "set live",
+    "preview": "preview",
+    "savedraft": "save as draft",
+    "addtitle": "add a title",
+    "desktop": "desktop",
+    "mobile": "mobile",
+    "createpopup": "create popup"
+  },
+    "editor": {
+      "donotshow": "don't show again",
+      "comment": "write a replay",
+      "additem": "More advenced option (image , video, button , drag&drop...)",
+      "removeitem": "Please place the dashed line before the block you'd like to remove",
+      "edititem": "Please place the dashed line before the block you'd like to update",
+      "drageditor": "drag editor",
+      "addtext": "add text",
+      "addspace": "add space",
+      "custombutton": "custom button",
+      "customvideo": "custom video",
+      "uploadimage": "upload image"
+    },
+  "content": {
+    "label": "content",
+    "priority": "priority",
+    "background": "popup packground",
+    "format": "format",
+    "visibility": "title visibility",
+    "reply": "replay type",
+    "device": "target device",
+    "position": "position",
+    "tags": "tags"
+  },
+  "rules": {
+    "label": "rules",
+    "groups": "target groups",
+    "schedule": "schedule",
+    "start-time": "start time",
+    "end-time": "end time",
+    "submit": "submit",
+    "selectdate": "select a date",
+    "behavior": "popup behavior",
+    "closeafter": "close after x minute",
+    "min": "min",
+    "group": "group",
+    "selectgroup": "select a group"
+  },
+  "audiences": {
+    "label": "audiences",
+    "users":"users",
+    "addrule":"add audience rule",
+    "savesegemnt":"save segment",
+    "usersmatch":"users match filters",
+    "search":"search...",
+    "psersondata":"person data",
+    "segment":"segment",
+    "newattribute":"new attribute",
+    "filterfromcsv":"filter audience from CSV"
+  },
+  "goal": {
+    "label": "goal",
+    "description": "Understand how your post drives people to take action in your product",
+    "placeholder": "add your goal ..."
+  }
+}

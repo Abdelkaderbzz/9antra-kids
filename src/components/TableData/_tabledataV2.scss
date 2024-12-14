@@ -1,0 +1,61 @@
+@import '@assets/styles/abstracts';
+
+.table_data {
+  .ant-table-container {
+    border-top: 1px solid $gray-light-300;
+    border-left: 1px solid $gray-light-300;
+    border-right: 1px solid $gray-light-300;
+    border-radius: 8px !important;
+
+    .ant-table-content {
+      border-radius: 8px;
+
+      .ant-table-thead tr th {
+        background: $gray-500 !important;
+        border-bottom: 1px solid $gray-light-300;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 24px;
+      }
+
+      .ant-table-tbody {
+        tr td {
+          white-space: nowrap;
+          border-bottom: 1px solid $gray-light-300;
+          padding-left: 24px;
+
+          color: $text-color;
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 300;
+        }
+
+        tr:last-child {
+          td:first-child {
+            border-bottom-left-radius: 8px;
+          }
+
+          td:last-child {
+            border-bottom-right-radius: 8px;
+          }
+        }
+      }
+
+      .ant-checkbox-inner {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 7px;
+        border: 1px solid $gray-light-400 !important;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: $success-500 !important;
+        border-color: $success-500 !important;
+      }
+
+      .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+        background: $light !important;
+      }
+    }
+  }
+}

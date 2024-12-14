@@ -1,0 +1,20 @@
+@import '@assets/styles/abstracts';
+.pagination-go-to {
+  @include flexbox(row, center, center);
+  gap: 6px;
+  padding: 10px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e4e7ec;
+  input {
+    width: 37px;
+    height: 23px;
+    border-radius: 5px;
+    border: 1px solid #e4e7ec;
+    padding-left: 3px;
+  }
+  svg {
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

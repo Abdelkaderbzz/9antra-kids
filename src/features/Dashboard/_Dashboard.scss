@@ -1,0 +1,39 @@
+@forward './components/index';
+@import '@assets/styles/abstracts';
+
+.dashbord_tabs {
+  height: 100%;
+
+  .ant-tabs-content-holder {
+    height: 100%;
+    .ant-tabs-content {
+      height: 100%;
+      .ant-tabs-tabpane {
+        height: 100%;
+      }
+
+      .rc-tabs-0-panel-1 {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.dashboard_navigation {
+  text-transform: capitalize;
+  @include flexbox(row, center, center);
+  gap: 5px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.new_client_btn {
+  background: $dark-900;
+  border-radius: 22px;
+  font-weight: 500;
+  color: $light;
+  padding: 10px 25px;
+  text-transform: capitalize;
+}

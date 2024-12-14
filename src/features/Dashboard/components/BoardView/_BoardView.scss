@@ -1,0 +1,95 @@
+@forward './components/BillingCard/BillingCard';
+@import '@assets/styles/abstracts';
+
+.board_view_section_conatainer {
+  border-top: 1px dashed #afafaf;
+  @include flexbox(row, start, start);
+  height: 100%;
+  width: 100%;
+
+  .board_column_container {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    @include flexbox(column, stretch, stretch);
+    gap: 10px;
+    border-radius: 2px;
+    padding: 16px;
+
+    .bord_column_title {
+      width: 100%;
+      @include flexbox(row, center, center);
+      position: absolute;
+      top: -15px;
+      left: 0px;
+      font-weight: 600;
+      nav {
+        @include flexbox(row, center, center);
+        padding: 3px 12px;
+        border-radius: 12px 12px 0px 0px;
+        gap: 5px;
+        text-transform: capitalize;
+        span {
+          @include flexbox(row, center, center);
+          width: 20px;
+          height: 20px;
+          background: #e8e8ed;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .board_column_container_1 {
+    background: #fffcf5;
+
+    .bord_column_title {
+      color: #f79007;
+      nav {
+        background-color: #fffcf5;
+      }
+    }
+  }
+
+  .board_column_container_2 {
+    background: #fafaff;
+
+    .bord_column_title {
+      color: #7a5bf9;
+      nav {
+        background-color: #fafaff;
+      }
+    }
+  }
+
+  .board_column_container_3 {
+    background: #dffced;
+
+    .bord_column_title {
+      color: #0eb869;
+      nav {
+        background-color: #d1fae6;
+      }
+    }
+  }
+  .board_column_container_4 {
+    background: #fef3f2;
+
+    .bord_column_title {
+      color: #db392d;
+      nav {
+        background-color: #fef3f2;
+      }
+    }
+  }
+  .board_column_container_5 {
+    background: #feffba;
+
+    .bord_column_title {
+      color: #d19908;
+      nav {
+        background-color: #feffba;
+      }
+    }
+  }
+}

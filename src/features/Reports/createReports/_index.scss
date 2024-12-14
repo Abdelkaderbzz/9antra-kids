@@ -1,0 +1,181 @@
+@import '@assets/styles/abstracts';
+.reports-container-form {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: $light;
+  margin: 60px auto;
+  padding: 67px 64px;
+  @media screen and (max-width: 1330px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 67px 20px;
+  }
+  @media screen and (max-width: 360px) {
+    padding: 67px 0px;
+  }
+  .img-upload {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 1px solid #d0d7f1;
+    padding: 20px 25px;
+    & > div {
+      max-width: 70%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      & > img {
+        max-width: 70px;
+        max-height: 70%;
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+      & > p {
+        color: blue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+    .remove-img-upload {
+      background: $light;
+      .anticon-delete {
+        color: red;
+        & > svg {
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+      }
+      &:hover {
+        background: #ebebeb;
+        padding: 3px 4px 1px 4px;
+        border-radius: 3px;
+      }
+    }
+  }
+  .ant-upload-wrapper {
+    width: 100%;
+    height: 265px;
+    border-radius: 20px;
+    border: 1px solid #d0d7f1;
+    background: #f7fbff;
+    .ant-upload,
+    .ant-upload-drag,
+    .css-dev-only-do-not-override-k7429z {
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .upload-text {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 27px;
+      border-radius: 10px;
+      border: 1px solid #d4daee;
+      background: $light;
+      @media screen and (max-width: 440px) {
+        flex-direction: column;
+        margin: 10px;
+      }
+    }
+  }
+  .reports-form-description {
+    width: 100%;
+    & > div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .reports-form-description-icon {
+        position: absolute;
+        display: flex;
+        gap: 6px;
+        color: #c8d0ef;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        &.textarea-focused {
+          display: none;
+        }
+      }
+      & > textarea {
+        width: 100%;
+        height: 140px;
+        padding: 9px 18px;
+        border-radius: 20px;
+        border: 1px solid #d0d7f1;
+        background: #f7fbff;
+        resize: none;
+        &:focus {
+          background: $light;
+        }
+      }
+    }
+  }
+  .reports-form-email {
+    width: 100%;
+    & > div {
+      position: relative;
+      .reports-form-email-icon {
+        position: absolute;
+        left: 10px;
+        top: 57%;
+        transform: translateY(-50%);
+        cursor: text;
+      }
+      & > input {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #d0d7f1;
+        padding: 10px;
+        padding-left: 44px;
+        &::placeholder {
+          color: #c8d0ef;
+          font-family: Inter;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .reports-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #506bcc;
+    color: $light;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    &:hover {
+      background: #637fe6;
+    }
+  }
+}

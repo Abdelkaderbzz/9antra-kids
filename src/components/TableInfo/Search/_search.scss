@@ -1,0 +1,50 @@
+@import '@assets/styles/abstracts';
+
+.list_info {
+  @include flexbox(row, start, center);
+  gap: 20px;
+  height: 33px;
+
+  .list_info_search_input {
+    width: 240px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid $gray-100;
+    background: $light;
+
+    .search_debounce_input {
+      width: 100%;
+      font-weight: 300;
+
+      &::placeholder {
+        color: $gray-ligght-500;
+      }
+    }
+  }
+
+  .list_info_btn_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 15px;
+    gap: 8px;
+    border-radius: 6px;
+    background: $gray-600;
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    > span {
+      color: $text-color;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+  }
+}

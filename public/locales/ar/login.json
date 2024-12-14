@@ -1,0 +1,19 @@
+{
+  "taki_popups": "9antrakids",
+  "sign_up": "التسجيل",
+  "welcome_back": "مرحباً بعودتك",
+  "description": "سجل الدخول للبدء.",
+  "googel_auth_label": "تسجيل الدخول باستخدام جوجل",
+  "continue_with_email": "أو، تابع باستخدام البريد الإلكتروني",
+  "work_mail": {
+    "label": "البريد الإلكتروني للعمل",
+    "placeholder": "مثال: you@yourcompany.com"
+  },
+  "password": {
+    "label": "كلمة المرور",
+    "placeholder": "كلمة المرور"
+  },
+  "forgot_password": "نسيت كلمة المرور؟",
+  "continue": "تابع",
+  "loading": "جارٍ التحميل..."
+}

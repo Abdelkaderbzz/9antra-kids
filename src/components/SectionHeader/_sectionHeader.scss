@@ -1,0 +1,79 @@
+@import '@assets/styles/abstracts';
+
+.profile_container_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid $gray-light-300;
+  padding-bottom: 16px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+
+  .profile_container_header_title {
+    .header_section_title {
+      @include flexbox(row, center center);
+      gap: 8px;
+      color: #615252;
+      font-size: 17px;
+      font-weight: 600;
+
+      .header_section_length {
+        font-size: 19px;
+        font-weight: 600;
+        color: $secondary;
+      }
+    }
+  }
+
+  .header_section_btns_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    > button {
+      width: fit-content;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 15px;
+      gap: 8px;
+      border-radius: 6px;
+      text-transform: capitalize;
+      font-weight: 400;
+      white-space: nowrap;
+
+      &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+
+    .group_container_header_upload_csv_btn {
+      background: $gray-600;
+
+      > span {
+        color: $text-color;
+      }
+
+      &:hover {
+        background-color: $gray-700;
+      }
+    }
+
+    .header_section_btn_new_user {
+      background: $secondary;
+
+      > span {
+        color: #fcfeff;
+      }
+
+      &:hover {
+        background: $secondary-950;
+      }
+    }
+  }
+}

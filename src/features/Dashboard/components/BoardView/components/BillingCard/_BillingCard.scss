@@ -1,0 +1,171 @@
+@import '@assets/styles/abstracts';
+
+.billing_card {
+  width: 100%;
+  border: 1px solid #e8e8e9;
+  background: #ffff;
+  border-radius: 12px;
+  padding: 10px;
+  @include flexbox(column, stretch, stretch);
+  gap: 10px;
+
+  .billing_card_top_section {
+    @include flexbox(row, space-between, center);
+
+    nav {
+      @include flexbox(column, start, start);
+
+      span {
+        font-weight: 500;
+        color: #000;
+        text-transform: capitalize;
+      }
+
+      p {
+        color: #0000006f;
+        text-transform: capitalize;
+      }
+    }
+
+    .three_dots_triger {
+      display: block;
+      cursor: pointer;
+      @include flexbox(row, center, center);
+      border: 2px solid #e8e8e9;
+      border-radius: 50%;
+
+      padding: 4px;
+    }
+  }
+
+  .billing_card_progress {
+    .progress_value {
+      @include flexbox(row, space-between, start);
+
+      p {
+        @include flexbox(row, space-between, center);
+        gap: 4px;
+
+        span {
+          text-transform: capitalize;
+          color: #333;
+        }
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .billing_card_avatar {
+    @include flexbox(row, space-between, center);
+
+    span {
+      font-weight: 500;
+      border-radius: 12px;
+      padding: 4px 8px;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.billing_card_1 {
+  .billing_card_avatar {
+    span {
+      color: #f79007;
+      background-color: #fffcf5;
+    }
+  }
+
+  .progress_bar {
+    .ant-progress-inner {
+      background-color: #fffcf5;
+
+      .ant-progress-bg {
+        background: #f79007;
+      }
+    }
+  }
+}
+
+.billing_card_2 {
+  .billing_card_avatar {
+    span {
+      color: #7a5bf9;
+      background-color: #fafaff;
+    }
+  }
+
+  .progress_bar {
+    .ant-progress-inner {
+      background-color: #fafaff;
+
+      .ant-progress-bg {
+        background: #7a5bf9;
+      }
+    }
+  }
+}
+
+.billing_card_3 {
+  .billing_card_avatar {
+    span {
+      color: #0eb869;
+      background-color: #d1fae6;
+    }
+  }
+
+  .progress_bar {
+    .ant-progress-inner {
+      background-color: #d1fae6;
+
+      .ant-progress-bg {
+        background: #0eb869;
+      }
+    }
+  }
+}
+
+.billing_card_4 {
+  .billing_card_avatar {
+    span {
+      color: #db392d;
+      background-color: #fef3f2;
+    }
+  }
+
+  .progress_bar {
+    .ant-progress-inner {
+      background-color: #fef3f2;
+
+      .ant-progress-bg {
+        background: #db392d;
+      }
+    }
+  }
+}
+
+.billing_card_5 {
+  .billing_card_avatar {
+    span {
+      color: #d19908;
+      background-color: #ffff;
+    }
+  }
+
+  .progress_bar {
+    .ant-progress-inner {
+      background-color: #feffba;
+
+      .ant-progress-bg {
+        background: #d19908;
+      }
+    }
+  }
+}

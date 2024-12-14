@@ -1,0 +1,33 @@
+@import '@assets/styles/abstracts';
+
+.table_users_user_avatar {
+  padding-left: 35px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 250px;
+
+  .row_user_avatar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    > svg {
+      border-radius: 50%;
+      max-width: 40px;
+      min-width: 40px;
+    }
+
+    > span {
+      color: $text-color;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 300;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 200px;
+      text-align: left;
+    }
+  }
+}

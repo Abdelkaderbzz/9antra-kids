@@ -1,0 +1,53 @@
+.products_crud_container {
+  width: 100%;
+
+  .products_crud_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 19px;
+    }
+
+    .product_crud_header_btns {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  .products_crud_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form_upload_products_images {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(37, 62, 103);
+      box-shadow:
+        rgba(0, 95, 173, 0.08) 0px 0px 12px 0px,
+        rgba(131, 169, 206, 0.15) 0px 0px 0px 0.5px;
+      border-radius: 16px;
+      padding-inline: 24px;
+      padding-block: 18px;
+      .form_upload_products_images_header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h2 {
+          font-size: 15px;
+        }
+      }
+      .ant-upload-wrapper {
+        width: 100% !important;
+      }
+    }
+  }
+}

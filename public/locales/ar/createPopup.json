@@ -1,0 +1,66 @@
+{
+  "controls": {
+    "setlive": "تفعيل",
+    "preview": "معاينة",
+    "savedraft": "حفظ كمسودة",
+    "addtitle": "إضافة عنوان",
+    "desktop": "سطح المكتب",
+    "mobile": "جوال",
+    "createpopup": "إنشاء نافذة منبثقة"
+  },
+  "content": {
+    "label": "المحتوى",
+    "priority": "الأولوية",
+    "background": "خلفية النافذة المنبثقة",
+    "format": "تنسيق",
+    "visibility": "رؤية العنوان",
+    "reply": "نوع الرد",
+    "device": "الجهاز المستهدف",
+    "position": "الموقع",
+    "tags": "العلامات"
+  },
+  "rules": {
+    "label": "القواعد",
+    "groups": "المجموعات المستهدفة",
+    "schedule": "الجدول الزمني",
+    "start-time": "وقت البدء",
+    "end-time": "وقت الانتهاء",
+    "submit": "إرسال",
+    "selectdate": "اختر تاريخًا",
+    "behavior": "سلوك النافذة المنبثقة",
+    "closeafter": "اغلاق بعد x دقيقة",
+    "min": "دقيقة",
+    "group": "مجموعة",
+    "selectgroup": "اختر مجموعة"
+  },
+  "audiences": {
+    "label": "الجماهير",
+    "users": "المستخدمون",
+    "addrule": "إضافة قاعدة جمهور",
+    "savesegemnt": "حفظ القطاع",
+    "usersmatch": "المستخدمون يطابقون الفلاتر",
+    "search": "البحث...",
+    "psersondata": "بيانات الشخص",
+    "segment": "قطاع",
+    "newattribute": "سمة جديدة",
+    "filterfromcsv": "تصفية الجمهور من ملف CSV"
+  },
+    "editor": {
+      "donotshow": "لا تظهر مرة أخرى",
+      "comment": "اكتب ردًا",
+      "additem": "خيارات متقدمة أكثر (صورة، فيديو، زر، سحب وإفلات...)",
+      "removeitem": "يرجى وضع الخط المتقطع قبل الكتلة التي تريد إزالتها",
+      "edititem": "يرجى وضع الخط المتقطع قبل الكتلة التي تريد تحديثها",
+      "drageditor": "محرر السحب",
+      "addtext": "أضف نصًا",
+      "addspace": "أضف مسافة",
+      "custombutton": "زر مخصص",
+      "customvideo": "فيديو مخصص",
+      "uploadimage": "تحميل صورة"
+    },
+  "goal": {
+    "label": "الهدف",
+    "description": "فهم كيفية دفع منشورك للناس لاتخاذ إجراء في منتجك",
+    "placeholder": "أضف هدفك ..."
+  }
+}

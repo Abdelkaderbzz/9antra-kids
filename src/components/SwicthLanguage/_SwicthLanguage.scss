@@ -1,0 +1,38 @@
+@use '../../assets/styles/abstracts' as *;
+
+.auth_header_select_languages {
+  .ant-select-selector {
+    height: 48px !important;
+    padding: 0px 24px !important;
+    border-color: $primary !important;
+    background-color: unset !important;
+    .ant-select-selection-item {
+      color: $primary !important;
+      background-color: unset !important;
+      font-size: 18px !important;
+      font-weight: 400 !important;
+      text-transform: capitalize !important;
+    }
+    &:hover {
+      border-color: $primary !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .ant-select-selector {
+      height: 40px !important;
+      padding: 0px 18px !important;
+      .ant-select-selection-item {
+        font-size: 14px !important;
+      }
+    }
+  }
+  @media screen and (max-width: 280px) {
+    .ant-select-selector {
+      .ant-select-selection-item {
+        width: 5ch !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+      }
+    }
+  }
+}

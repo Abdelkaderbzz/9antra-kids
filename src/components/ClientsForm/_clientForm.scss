@@ -1,0 +1,39 @@
+@import '@assets/styles/abstracts';
+.org_users_modal_creation_title {
+  text-transform: capitalize;
+  color: $text-color;
+  font-size: 15px;
+  font-weight: 600;
+}
+.crud-form-popup {
+  width: 100%;
+  margin-top: 24px;
+  .crud-form-field {
+    margin-bottom: 12px;
+    label {
+      text-transform: capitalize;
+      margin-bottom: 0px;
+      font-size: 0.7rem;
+    }
+    input {
+      height: 39px;
+      padding: 5px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      &::placeholder {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .form_submit_section {
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid $gray-400;
+
+    @include flexbox(row, end, unset);
+    gap: 10px;
+  }
+}
+.ant-modal-header {
+  padding-inline-start: 0px;
+}

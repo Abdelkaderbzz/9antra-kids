@@ -1,0 +1,82 @@
+@import '@assets/styles/abstracts';
+.list-reports {
+  max-width: 1390px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: auto;
+  .no-reports {
+    font-size: 16px;
+    text-align: center;
+  }
+  .list-reports-card {
+    width: 266px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 23px;
+    background: $light;
+    box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.06);
+    .reports-card-img {
+      width: 237px;
+      height: 183px;
+      border-radius: 11px;
+    }
+    .reports-card-title {
+      width: 100%;
+      padding: 9px;
+      border-radius: 5px;
+      text-align: center;
+      background: #e7edff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .reports-card-description {
+      color: #1c1c1c;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+      max-width: 100%;
+      max-height: 41px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+    }
+    .reports-card-btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: #506bcc;
+      color: $light;
+      font-size: 14px;
+      font-weight: 400;
+      transition: background 0.3s ease;
+      &:hover {
+        background: #4052a5;
+      }
+    }
+  }
+}
+.reports-list-btn-loading-more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  > button {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: $light;
+    text-align: 'center';
+    padding: 0px 10px;
+    margin-top: 25px;
+    line-height: 32px;
+    &:hover {
+      color: blue;
+      border: 1px solid blue;
+    }
+  }
+}

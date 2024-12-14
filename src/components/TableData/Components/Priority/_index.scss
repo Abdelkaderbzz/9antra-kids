@@ -1,0 +1,18 @@
+.row-priority {
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  color: #333;
+  font-weight: 400;
+  justify-content: center;
+  text-transform: capitalize;
+  &.normal {
+    background: rgba(80, 204, 197, 0.35);
+  }
+  &.important {
+    background: #fff4d2;
+  }
+  &.urgent {
+    background: #ffe5e5;
+  }
+}

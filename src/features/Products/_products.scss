@@ -1,0 +1,13 @@
+@forward './create/ProductsCreate';
+@import '@assets/styles/abstracts';
+
+.products_container {
+  @include flexbox(column, space-between, stretch);
+  height: 100%;
+  gap: 20px;
+  .products_data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

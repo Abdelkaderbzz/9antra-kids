@@ -1,0 +1,68 @@
+@forward './components/PerPage/PerPage';
+@import '@assets/styles/abstracts';
+
+.pagination-container {
+  @include flexbox(row, center, center);
+  gap: 15px;
+
+  .arrow-first-item,
+  .arrow-last-item {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .sub-pagination {
+    border-radius: 8px;
+    border: 1px solid #e4e7ec;
+    @include flexbox(row, center, center);
+    height: 32px;
+
+    .pagination-button-page-number {
+      height: 100%;
+      @include flexbox(row, center, center);
+
+      .pagination-button {
+        @include flexbox(row, center, center);
+        height: 100%;
+        color: #475467;
+        padding: 0px 10px;
+        background-color: #fafafa;
+        border-right: 1px solid #e4e7ec;
+        width: fit-content;
+        min-width: 40px;
+        font-weight: 500;
+      }
+
+      .pagination-button-active {
+        color: #000;
+        background: #f2f4f7;
+      }
+    }
+
+    .prev-btn {
+      border-right: 1px solid #e4e7ec;
+      border-radius: 10px 0px 0px 10px;
+    }
+
+    .next-btn {
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    .prev-next-btns {
+      @include flexbox(row, center, center);
+      min-width: 90px;
+      height: 100%;
+      background-color: #fafafa;
+      gap: 10px;
+
+      p {
+        font-weight: 500;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

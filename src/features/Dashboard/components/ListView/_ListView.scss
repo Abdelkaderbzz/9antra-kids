@@ -1,0 +1,82 @@
+@forward './components/BillingCardList/BillingCardList';
+@import '@assets/styles/abstracts';
+
+.list_view_section_conatainer {
+  overflow-y: scroll;
+  border-top: 1px dashed #afafaf;
+  @include flexbox(column, start, start);
+  height: 100%;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+
+  .list_view_list {
+    position: relative;
+    width: 100%;
+    min-height: 20px;
+    height: 100%;
+    @include flexbox(column, stretch, stretch);
+    border-radius: 2px;
+  }
+
+  .list_view_section_title {
+    width: 100%;
+    @include flexbox(row, start, center);
+
+    font-weight: 600;
+
+    nav {
+      @include flexbox(row, center, center);
+      padding: 4px 14px;
+      border-radius: 15px;
+      gap: 5px;
+      text-transform: capitalize;
+
+      span {
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        background: #e8e8ed;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .list_view_section_title_1 {
+    color: #f79007;
+
+    nav {
+      background-color: #fffcf5;
+    }
+  }
+
+  .list_view_section_title_2 {
+    color: #7a5bf9;
+
+    nav {
+      background-color: #fafaff;
+    }
+  }
+
+  .list_view_section_title_3 {
+    color: #0eb869;
+
+    nav {
+      background-color: #d1fae6;
+    }
+  }
+  .list_view_section_title_4 {
+    color: #db392d;
+
+    nav {
+      background-color: #fef3f2;
+    }
+  }
+  .list_view_section_title_5 {
+    color: #d19908;
+
+    nav {
+      background-color: #feffba;
+    }
+  }
+}

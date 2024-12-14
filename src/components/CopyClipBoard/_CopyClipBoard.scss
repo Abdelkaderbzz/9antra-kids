@@ -1,0 +1,13 @@
+@use '../../assets/styles/abstracts/colors' as colors;
+.copy_messagae {
+  padding: 5.25px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: colors.$secondary-500;
+    fill: colors.$secondary;
+    stroke: colors.$secondary;
+  }
+}

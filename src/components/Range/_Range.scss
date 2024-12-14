@@ -1,0 +1,18 @@
+@import '@assets/styles/abstracts';
+
+.range-container {
+  width: 240px;
+  @include flexbox(row, start center);
+
+  .range-label {
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .ant-slider-track {
+    background-color: $secondary !important;
+  }
+  .ant-row {
+    width: 100% !important;
+  }
+}

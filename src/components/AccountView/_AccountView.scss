@@ -1,0 +1,178 @@
+@import '@assets/styles/abstracts';
+
+.account_view {
+  width: 282px;
+  padding-top: 16px;
+
+  .account_view_header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 0px 16px 16px 16px;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: $gray-500;
+
+      .account_view_header_info {
+        .account_view_header_name {
+          color: $primary;
+        }
+      }
+    }
+
+    .account_view_header_avatar {
+      min-width: 40px;
+      max-width: 40px;
+      min-height: 40px;
+      max-height: 40px;
+      border-radius: 20px;
+    }
+
+    .account_view_header_info {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      .account_view_header_name {
+        color: $gray-primary;
+        font-size: 16px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 160px;
+      }
+
+      .account_view_header_email {
+        color: $gray-900;
+        font-size: 14px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 180px;
+      }
+    }
+  }
+
+  .account_view_body {
+    width: 100%;
+    border-bottom: 1px solid $gray-700;
+    border-top: 1px solid $gray-700;
+    padding: 16px;
+
+    .account_view_body_item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+
+      > div {
+        display: flex;
+        gap: 12px;
+
+        > svg > path,
+        circle,
+        ellipse {
+          width: 20px;
+          height: 20px;
+        }
+
+        .account_view_body_item_title {
+          color: $gray-primary;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .account_view_body_item_Arrow_Right {
+        display: none;
+      }
+
+      &:hover,
+      &.active {
+        border-radius: 10px;
+        background: $gray-500;
+        cursor: pointer;
+
+        > div {
+          > svg > path,
+          circle,
+          ellipse {
+            fill: $primary;
+          }
+
+          .account_view_body_item_title {
+            color: $primary;
+          }
+        }
+
+        .account_view_body_item_Arrow_Right {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .account_view_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    .account_view_footer_item {
+      width: 100%;
+      @include flexbox(row, space-between, center);
+      padding: 8px 12px;
+
+      > div {
+        display: flex;
+        gap: 12px;
+        cursor: pointer;
+
+        > svg {
+          stroke: $gray-primary;
+          width: 20px;
+          height: 20px;
+        }
+
+        .account_view_footer_title {
+          color: $gray-primary;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .account_view_footer_item_Arrow_Right {
+        display: none;
+      }
+
+      &:hover {
+        border-radius: 10px;
+        background: $gray-500;
+        cursor: pointer;
+
+        > div {
+          > svg {
+            stroke: $primary;
+          }
+
+          .account_view_footer_title {
+            color: $primary;
+          }
+        }
+
+        .account_view_footer_item_Arrow_Right {
+          display: block;
+        }
+      }
+    }
+  }
+}

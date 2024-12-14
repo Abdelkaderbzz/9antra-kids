@@ -1,0 +1,38 @@
+@import '@assets/styles/abstracts';
+
+.menu_item {
+  width: 100%;
+  padding-top: 6px;
+  background: transparent;
+  .menu_item_icon {
+    color: #8e8e91;
+  }
+
+  &.active {
+    @include flexbox(row, center, center);
+    border-radius: 50%;
+    padding: 18px 18px;
+    background: #333438;
+    width: fit-content;
+    .menu_item_icon {
+      svg,
+      path,
+      circle,
+      ellipse {
+        fill: #fff !important;
+      }
+    }
+  }
+}
+
+.menu_item_popover {
+  .ant-popover-content {
+    .ant-popover-inner {
+      padding: 0px !important;
+    }
+  }
+
+  .menu_item_popover_title {
+    padding: 10px;
+  }
+}

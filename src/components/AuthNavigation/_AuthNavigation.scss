@@ -1,0 +1,39 @@
+@import '@assets/styles/abstracts';
+.forget-password {
+  @media screen and (max-width: 550px) {
+  }
+  @include flexbox(row, space-between, center);
+  padding: 0 8px;
+  nav {
+    @include flexbox(row, flex-start, center);
+    gap: 13px;
+    span {
+      font-size: 16px;
+      font-weight: 300;
+      color: #373737;
+      @media screen and (max-width: 550px) {
+        font-size: 10px;
+      }
+    }
+    input {
+      width: 20px;
+      height: 20px;
+      @media screen and (max-width: 550px) {
+        width: 12px;
+      }
+    }
+  }
+  a {
+    color: $secondary;
+    font-size: 18px;
+    font-weight: 500;
+    @media screen and (max-width: 550px) {
+      font-size: 10px;
+    }
+  }
+  .forget-password-link {
+    margin-top: 25px;
+    width: 100%;
+    @include flexbox(row, end, center);
+  }
+}

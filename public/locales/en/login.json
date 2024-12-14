@@ -1,0 +1,19 @@
+{
+  "taki_popups": "9antrakids",
+  "sign_up": "Sign up",
+  "welcome_back": "Welcome Back",
+  "description": "Sign in to get started.",
+  "googel_auth_label": "Sign in with Google",
+  "continue_with_email": "Or, continue with email",
+  "work_mail": {
+    "label": "Email",
+    "placeholder": "Example : you@yourcompany.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Password"
+  },
+  "forgot_password": "Forgot password ?",
+  "continue": "Continue",
+  "loading": "loading..."
+}

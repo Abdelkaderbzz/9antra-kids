@@ -1,0 +1,13 @@
+@import '../../assets/styles/abstracts/colors';
+
+.textarea_input {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  &_label {
+    color: $text-color;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+}

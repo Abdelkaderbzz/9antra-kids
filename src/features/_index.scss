@@ -1,0 +1,9 @@
+@forward './NotFound/NotFound';
+@forward './Login/Login';
+@forward './Dashboard/Dashboard';
+@use './Settings/settings';
+@forward './Profile/profile';
+@forward './ForgetPassword';
+@forward './Reports';
+@forward './Clients/clients';
+@forward './Products/products';

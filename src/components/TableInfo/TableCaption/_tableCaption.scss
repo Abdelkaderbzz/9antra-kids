@@ -1,0 +1,78 @@
+@import '@assets/styles/abstracts';
+
+.ant-table-title {
+  background: #fafafa;
+
+  .table_caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .table_caption_selected_items {
+      @include flexbox(row, center, center);
+      gap: 8px;
+      text-transform: capitalize;
+      color: $text-color;
+      font-weight: 500;
+
+      .table_caption_selected_items_delete_btn {
+        @include flexbox(row, center, center);
+        gap: 8px;
+        height: 32px;
+        padding: 11px 24px;
+        border-radius: 10px;
+        background: #fde8e8;
+        transition:
+          background 0.3s,
+          color 0.3s;
+
+        > svg {
+          max-width: 20px;
+          max-height: 20px;
+          min-width: 20px;
+          min-height: 20px;
+        }
+
+        > span {
+          text-transform: capitalize;
+          font-family: Poppins;
+          color: $danger-650;
+          font-weight: 500;
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          background: #fbd1d1;
+
+          > svg path {
+            fill: #a00f0f;
+          }
+
+          > span {
+            color: #a00f0f;
+          }
+        }
+      }
+    }
+
+    .table_caption_btn_columns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      height: 32px;
+      padding: 11px 8px;
+      border-radius: 10px;
+      border: 1px solid $gray-light-300;
+      background: $gray-500;
+      cursor: pointer;
+
+      > span {
+        text-transform: capitalize;
+        font-family: Poppins;
+        color: $text-color;
+        font-weight: 500;
+      }
+    }
+  }
+}

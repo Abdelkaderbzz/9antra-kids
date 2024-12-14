@@ -1,0 +1,16 @@
+{
+   "edit_profile":"Edit profile",
+   "save_changes":"Save changes",
+   "udpate_password":"Update password",
+   "edit_password":"Edit password",
+   "basic_info":"Basic Info",
+   "domain":"Domain",
+   "user_name":"User name",
+   "email":"Email",
+   "old_password":"Old password",
+   "new_password":"New password",
+   "confirm_password":"Confirm password",
+   "change_profile_photo":"Change profile photo",
+   "password_error":"error occured while updating your password ,try again !",
+   "integration":"Intégration"
+}

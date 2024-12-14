@@ -1,0 +1,18 @@
+@import '@assets/styles/abstracts';
+.popup-background-upload {
+  position: relative;
+  min-width: 88px;
+  height: 60px;
+  padding: 6px;
+  @include flexbox(column, center, center);
+  background: $light;
+  border-radius: 12px;
+  border: 1px solid var(--Neutral-1, #d6e1eb);
+  cursor: pointer;
+  svg {
+    font-size: 29px;
+  }
+}
+#popup-background-upload-input {
+  display: none;
+}

@@ -1,0 +1,66 @@
+{
+  "controls": {
+    "setlive": "mettre en ligne",
+    "preview": "aperçu",
+    "savedraft": "enregistrer comme brouillon",
+    "addtitle": "ajouter un titre",
+    "desktop": "bureau",
+    "mobile": "mobile",
+    "createpopup": "créer une fenêtre contextuelle"
+  },
+    "editor": {
+      "donotshow": "ne plus afficher",
+      "comment": "écrire une réponse",
+      "additem": "Plus d'options avancées (image, vidéo, bouton, glisser-déposer...)",
+      "removeitem": "Veuillez placer la ligne pointillée avant le bloc que vous souhaitez supprimer",
+      "edititem": "Veuillez placer la ligne pointillée avant le bloc que vous souhaitez mettre à jour",
+      "drageditor": "éditeur de glisser-déposer",
+      "addtext": "ajouter du texte",
+      "addspace": "ajouter un espace",
+      "custombutton": "bouton personnalisé",
+      "customvideo": "vidéo personnalisée",
+      "uploadimage": "télécharger une image"
+    },
+  "content": {
+    "label": "contenu",
+    "priority": "priorité",
+    "background": "arrière-plan",
+    "format": "format",
+    "visibility": "visibilité du titre",
+    "reply": "type de réponse",
+    "device": "appareil cible",
+    "position": "position",
+    "tags": "tags"
+  },
+  "rules": {
+    "label": "règles",
+    "groups": "groupes cibles",
+    "schedule": "programme",
+    "start-time": "heure de début",
+    "end-time": "heure de fin",
+    "submit": "soumettre",
+    "selectdate": "sélectionner une date",
+    "behavior": "comportement de la fenêtre contextuelle",
+    "closeafter": "fermer après x minute",
+    "min": "minute",
+    "group": "groupe",
+    "selectgroup": "sélectionner un groupe"
+  },
+  "audiences": {
+    "label": "audiences",
+    "users": "utilisateurs",
+    "addrule": "ajouter une règle d'audience",
+    "savesegemnt": "enregistrer le segment",
+    "usersmatch": "utilisateurs correspondant aux filtres",
+    "search": "recherche...",
+    "psersondata": "données personnelles",
+    "segment": "segment",
+    "newattribute": "nouvel attribut",
+    "filterfromcsv": "filtrer l'audience à partir d'un fichier CSV"
+  },
+  "goal": {
+    "label": "objectif",
+    "description": "Comprendre comment votre publication incite les gens à agir dans votre produit",
+    "placeholder": "ajoutez votre objectif ..."
+  }
+}

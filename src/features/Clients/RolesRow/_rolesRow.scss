@@ -1,0 +1,23 @@
+.table_users_roles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .table_users_role_name {
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 6px;
+    background: #ebebeb;
+    text-transform: lowercase;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .more_roles {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 10px;
+  }
+}

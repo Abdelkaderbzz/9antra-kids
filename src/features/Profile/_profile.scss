@@ -1,0 +1,60 @@
+@forward './components';
+@import '../../assets/styles/abstracts/colors';
+
+.profile-container {
+  width: 100%;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid#D6E1EB;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+
+    &-button {
+      color: white;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: $text-color;
+    }
+  }
+
+  .profile-update-title {
+    font-size: 18px;
+    color: #5c646d;
+    font-weight: 600;
+  }
+
+  .profile-forms {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: start;
+    margin-top: 25px;
+    gap: 2rem;
+
+    @media screen and (max-width: 1150px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .password-update-container,
+    .profile-update-container {
+      width: 75%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.password-update-container {
+  background-color: #f6f6f6;
+  padding: 20px 24px 20px 24px;
+  gap: 24px;
+}

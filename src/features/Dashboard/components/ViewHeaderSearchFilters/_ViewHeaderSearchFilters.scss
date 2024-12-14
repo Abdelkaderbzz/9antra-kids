@@ -1,0 +1,45 @@
+@import '@assets/styles/abstracts';
+
+.header_search_filters {
+  @include flexbox(row, space-between, center);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+
+  .header_search_filters_input {
+    border: 1px solid #afafaf;
+    background: #fafafa;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 3px 6px;
+    width: 280px;
+  }
+
+  .header_search_filters_btns {
+    @include flexbox(row, end, center);
+    gap: 10px;
+
+    .header_search_filters_btn {
+      @include flexbox(row, center, center);
+      gap: 4px;
+      padding: 4px 16px;
+      background-color: #fafafa;
+      border: 1px solid #afafaf;
+      border-radius: 8px;
+      svg {
+        color: #afafaf;
+      }
+      span {
+        color: #afafaf;
+        font-size: 14px;
+      }
+      &:hover {
+        background-color: #ebf5ff;
+        border: none;
+        span,
+        svg {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

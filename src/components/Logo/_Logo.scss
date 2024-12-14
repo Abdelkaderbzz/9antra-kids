@@ -1,0 +1,45 @@
+@import '@assets/styles/abstracts';
+
+.logo {
+  @include flexbox(row, center, center);
+  gap: 12px;
+  cursor: pointer;
+
+  >svg>rect {
+    width: 205px;
+    height: 72px;
+  }
+
+  .logo_label {
+    color: var(--logo, #152d48);
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  @media screen and (max-width: 360px) {
+    .logo_label {
+      display: none;
+    }
+  }
+}
+
+.main_sidebar_logo {
+  margin-bottom: 24px;
+
+  .logo {
+    >svg {
+      width: 34px;
+      height: 28px;
+    }
+
+    .logo_label {
+      display: none;
+    }
+  }
+}

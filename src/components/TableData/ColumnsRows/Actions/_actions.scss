@@ -1,0 +1,53 @@
+@import '@assets/styles/abstracts';
+
+.table_data_actions {
+  background: unset;
+  width: 32px;
+  height: 32px;
+
+  > svg {
+    width: 100%;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 40px;
+    background: $gray-50;
+    color: $secondary;
+  }
+}
+
+.popover_action_popup {
+  .action-popup {
+    @include flexbox(column, start, start);
+    gap: 5px;
+
+    .action-popup-button {
+      @include flexbox(row, flex-start, flex-start);
+      background: unset;
+      gap: 5px;
+      min-width: 135px;
+      border: 1px solid #dedede;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+      svg {
+        color: #506bcc;
+        font-size: 21px;
+      }
+
+      &:hover {
+        border-color: #506bcc;
+
+        > span {
+          color: #6690ff;
+        }
+      }
+    }
+  }
+}

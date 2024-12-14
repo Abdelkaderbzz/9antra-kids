@@ -1,0 +1,45 @@
+@import '@assets/styles/abstracts';
+.popup-grone-status {
+  .grone-running,
+  .grone-canceled,
+  .grone-finished,
+  .grone-draft,
+  .grone-pending {
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 8px 14px;
+    color: $light;
+    cursor: pointer;
+  }
+  .grone-pending {
+    color: #333;
+  }
+  .grone-draft {
+    background-color: #eee;
+    color: #333;
+  }
+  .grone-running {
+    background-color: #399e0db8;
+  }
+
+  .grone-canceled {
+    background-color: #fe9292;
+  }
+  .grone-pending {
+    background-color: #dfe531;
+  }
+  .grone-finished {
+    background-color: #76b7f3;
+  }
+}
+.schedule-popover {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  p {
+    font-weight: 600;
+    span {
+      font-weight: 400;
+    }
+  }
+}
