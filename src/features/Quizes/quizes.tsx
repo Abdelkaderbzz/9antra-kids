@@ -1,9 +1,6 @@
-import { Quiz } from "./quizes/quizes"
+import { Quiz } from './quizes/quizes'
 
-
-
-const quizes = () =>
-{
+const quizes = () => {
   return (
     <div className="quiz-page">
       <Quiz />

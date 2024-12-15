@@ -1,23 +1,19 @@
-"use client";
+'use client'
 
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
-interface TimerProps
-{
-  timeRemaining: number;
-  onTimeUp: () => void;
+interface TimerProps {
+  timeRemaining: number
+  onTimeUp: () => void
 }
 
-export function Timer({ timeRemaining, onTimeUp }: TimerProps)
-{
-  useEffect(() =>
-  {
-    if (timeRemaining === 0)
-    {
-      onTimeUp();
+export function Timer({ timeRemaining, onTimeUp }: TimerProps) {
+  useEffect(() => {
+    if (timeRemaining === 0) {
+      onTimeUp()
     }
-  }, [timeRemaining, onTimeUp]);
+  }, [timeRemaining, onTimeUp])
 
   return (
     <div className="timer-container">
@@ -29,5 +25,5 @@ export function Timer({ timeRemaining, onTimeUp }: TimerProps)
       />
       <div className="timer-text">{timeRemaining}</div>
     </div>
-  );
+  )
 }

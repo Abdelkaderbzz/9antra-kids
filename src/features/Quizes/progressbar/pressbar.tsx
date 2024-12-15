@@ -1,17 +1,14 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
-
-interface ProgressBarProps
-{
-  progress: number;
-  total: number;
+interface ProgressBarProps {
+  progress: number
+  total: number
 }
 
-export function ProgressBar({ progress, total }: ProgressBarProps)
-{
-  const percentage = (progress / total) * 100;
+export function ProgressBar({ progress, total }: ProgressBarProps) {
+  const percentage = (progress / total) * 100
 
   return (
     <div className="progress-bar">
@@ -22,5 +19,5 @@ export function ProgressBar({ progress, total }: ProgressBarProps)
         transition={{ duration: 0.5 }}
       />
     </div>
-  );
+  )
 }

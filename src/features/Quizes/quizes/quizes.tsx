@@ -1,83 +1,72 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Button, Card } from "antd";
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Button, Card } from 'antd'
 
-import { Timer } from "../timer/timer";
-import { ProgressBar } from "../progressbar/pressbar";
-import { questions } from "../quizz-data";
-import { QuizState } from "../types";
-import { useNavigate } from "react-router-dom";
+import { Timer } from '../timer/timer'
+import { ProgressBar } from '../progressbar/pressbar'
+import { questions } from '../quizz-data'
+import { QuizState } from '../types'
+import { useNavigate } from 'react-router-dom'
 
+const TIMER_DURATION = 10
 
-const TIMER_DURATION = 10;
-
-export function Quiz()
-{
-  const navigate=useNavigate()
+export function Quiz() {
+  const navigate = useNavigate()
   const [state, setState] = useState<QuizState>({
     currentQuestion: 0,
     answers: {},
     timeRemaining: TIMER_DURATION,
     isComplete: false,
-  });
+  })
 
-  useEffect(() =>
-  {
-    if (!state.isComplete && state.timeRemaining > 0)
-    {
-      const timer = setInterval(() =>
-      {
+  useEffect(() => {
+    if (!state.isComplete && state.timeRemaining > 0) {
+      const timer = setInterval(() => {
         setState((prev) => ({
           ...prev,
           timeRemaining: prev.timeRemaining - 1,
-        }));
-      }, 1000);
-      return () => clearInterval(timer);
+        }))
+      }, 1000)
+      return () => clearInterval(timer)
     }
-  }, [state.timeRemaining, state.isComplete]);
+  }, [state.timeRemaining, state.isComplete])
 
-  const handleAnswer = (answerIndex: number) =>
-  {
+  const handleAnswer = (answerIndex: number) => {
     setState((prev) => ({
       ...prev,
       answers: {
         ...prev.answers,
         [prev.currentQuestion]: answerIndex,
       },
-    }));
-  };
+    }))
+  }
 
-  const handleNext = () =>
-  {
-    if (state.currentQuestion < questions.length - 1)
-    {
+  const handleNext = () => {
+    if (state.currentQuestion < questions.length - 1) {
       setState((prev) => ({
         ...prev,
         currentQuestion: prev.currentQuestion + 1,
         timeRemaining: TIMER_DURATION,
-      }));
-    } else
-    {
+      }))
+    } else {
       setState((prev) => ({
         ...prev,
         isComplete: true,
-      }));
+      }))
     }
-  };
+  }
 
-  const handleTimeUp = () =>
-  {
-    handleNext();
-  };
+  const handleTimeUp = () => {
+    handleNext()
+  }
 
-  if (state.isComplete)
-  {
+  if (state.isComplete) {
     const correctAnswers = Object.entries(state.answers).filter(
       ([questionIndex, answerIndex]) =>
-        questions[Number(questionIndex)].correctAnswer === answerIndex
-    ).length;
+        questions[Number(questionIndex)].correctAnswer === answerIndex,
+    ).length
 
     return (
       <div className="quiz__complete">
@@ -86,7 +75,7 @@ export function Quiz()
           You got {correctAnswers} out of {questions.length} correct!
         </p>
         <Button
-          style={{marginRight:'10px'}}
+          style={{ marginRight: '10px' }}
           onClick={() =>
             setState({
               currentQuestion: 0,
@@ -98,15 +87,12 @@ export function Quiz()
         >
           Restart Quiz
         </Button>
-        <Button
-          onClick={() => navigate('/leagues')}>
-          navigate to leagues
-        </Button>
+        <Button onClick={() => navigate('/leagues')}>navigate to leagues</Button>
       </div>
-    );
+    )
   }
 
-  const currentQuestion = questions[state.currentQuestion];
+  const currentQuestion = questions[state.currentQuestion]
 
   return (
     <div className="quiz">
@@ -129,10 +115,9 @@ export function Quiz()
               transition={{ delay: index * 0.1 }}
             >
               <Card
-                className={`quiz__option ${state.answers[state.currentQuestion] === index
-                    ? "quiz__option--selected"
-                    : ""
-                  }`}
+                className={`quiz__option ${
+                  state.answers[state.currentQuestion] === index ? 'quiz__option--selected' : ''
+                }`}
                 onClick={() => handleAnswer(index)}
               >
                 <div className="quiz__option-content">
@@ -147,10 +132,10 @@ export function Quiz()
         <div className="quiz__actions">
           <Button onClick={() => window.location.reload()}>Rapport</Button>
           <Button onClick={handleNext}>
-            {state.currentQuestion === questions.length - 1 ? "Finish" : "Continue"}
+            {state.currentQuestion === questions.length - 1 ? 'Finish' : 'Continue'}
           </Button>
         </div>
       </div>
     </div>
-  );
+  )
 }
