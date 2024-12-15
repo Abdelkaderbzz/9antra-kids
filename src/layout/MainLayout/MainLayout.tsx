@@ -16,7 +16,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <div
         className={`main-layout-sidebar ${showSidebar ? 'main-layout-toggle-mobile-sidebar' : ''}`}
       >
-        <Sidebar collapseSidebar={collapseSidebar} setShowSidebar={setShowSidebar} />
+        {/* <Sidebar collapseSidebar={collapseSidebar} setShowSidebar={setShowSidebar} /> */}
       </div>
       {showSidebar && width <= 1250 ? (
         <span onClick={() => setShowSidebar(false)} className="main-layout-shadow"></span>

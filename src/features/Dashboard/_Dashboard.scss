@@ -6,8 +6,10 @@
 
   .ant-tabs-content-holder {
     height: 100%;
+
     .ant-tabs-content {
       height: 100%;
+
       .ant-tabs-tabpane {
         height: 100%;
       }
@@ -36,4 +38,51 @@
   color: $light;
   padding: 10px 25px;
   text-transform: capitalize;
+}
+
+
+.Dashboard-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+
+}
+
+.Dashboard-1 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.Dashboard-main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 4rem;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.course {
+  cursor: pointer;
+  transition: all ease-in 200ms;
+
+  &:hover {
+    scale: 105%;
+  }
 }

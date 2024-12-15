@@ -60,13 +60,24 @@ const routes: RouteConfig[] = [
     component: lazy(() => import('@src/features/ForgetPassword/components/ResetWait/ResetWait')),
     layout: GuestLayout,
   },
-
-  // AuthGuard Routes
   {
     exact: true,
-    guard: AuthGuard,
-    path: '/dashboard',
-    component: lazy(() => import('@src/pages/Dashboard')),
+    // guard: AuthGuard,
+    path: '/courses',
+    component: lazy(() => import('@src/pages/Courses')),
+    layout: MainLayout,
+  },
+  {
+    exact: true,
+    // guard: AuthGuard,
+    path: '/map',
+    component: lazy(() => import('@src/pages/Map')),
+    layout: MainLayout,
+  }, {
+    exact: true,
+    // guard: AuthGuard,
+    path: '/leagues',
+    component: lazy(() => import('@src/pages/Leagues')),
     layout: MainLayout,
   },
   {

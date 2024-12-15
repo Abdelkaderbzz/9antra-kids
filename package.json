@@ -52,7 +52,6 @@
     "react-router-dom": "^6.16.0",
     "react-select-async-paginate": "^0.7.3",
     "redux-persist": "^6.0.0",
-    "sass": "^1.62.1",
     "socket.io-client": "^4.7.2",
     "suneditor": "^2.45.1",
     "suneditor-react": "^3.6.1",
