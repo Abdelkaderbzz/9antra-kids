@@ -32,6 +32,7 @@
     "i18next-browser-languagedetector": "^7.0.2",
     "i18next-http-backend": "^2.2.1",
     "jwt-decode": "^3.1.2",
+    "lucide-react": "^0.468.0",
     "moment": "^2.29.4",
     "papaparse": "^5.4.1",
     "prettier": "^3.1.1",

@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   build: {
     // outDir: 'dist',
-    chunkSizeWarningLimit: 2200,
+    chunkSizeWarningLimit: 3300,
   },
   plugins: [react(), svgr()],
   resolve: {

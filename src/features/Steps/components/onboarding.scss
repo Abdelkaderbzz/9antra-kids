@@ -1,0 +1,65 @@
+.onboarding-form {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  .progress-bar {
+    margin-bottom: 2rem;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .ant-input {
+      padding: 0.5rem;
+    }
+  }
+
+  .step-header {
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      color: var(--muted-foreground);
+    }
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+
+    .ant-btn {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 0.5rem;
+
+        &.reverse {
+          margin-right: 0;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .category-selection,
+  .preferences {
+    min-height: 25rem;
+  }
+}

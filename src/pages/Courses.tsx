@@ -1,2 +1,2 @@
-import Dashboard from '@features/Dashboard/Dashboard'
+import Dashboard from '@features/Courses/Courses'
 export default Dashboard
