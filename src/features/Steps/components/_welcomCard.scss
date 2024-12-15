@@ -1,0 +1,49 @@
+// WelcomeCard.module.scss
+
+
+
+.card {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+
+
+    .greeting {
+      margin-bottom: 0.5rem;
+    }
+
+    .name {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .description {
+    color: #6b7280; // text-gray-500
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+
+  .startButton {
+    width: 100%;
+    padding: 1.5rem; // py-6
+    font-size: 1.125rem; // text-lg
+    background-color: #4169e1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #3154c4; // hover:bg-[#3154c4]
+    }
+  }
+}

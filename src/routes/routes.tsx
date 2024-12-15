@@ -65,9 +65,23 @@ const routes: RouteConfig[] = [
   {
     exact: true,
     guard: AuthGuard,
-    path: '/dashboard',
-    component: lazy(() => import('@src/pages/Dashboard')),
+    path: '/courses',
+    component: lazy(() => import('@src/pages/Courses')),
     layout: MainLayout,
+  },
+  {
+    exact: true,
+    guard: AuthGuard,
+    path: '/lessons',
+    component: lazy(() => import('@src/features/lessons/Lessons')),
+    layout: MainLayout,
+  },
+  {
+    exact: true,
+    guard: AuthGuard,
+    path: '/steps',
+    component: lazy(() => import('@src/pages/Steps')),
+    layout: GuestLayout,
   },
   {
     exact: true,

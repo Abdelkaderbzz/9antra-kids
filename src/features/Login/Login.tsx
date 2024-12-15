@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useFormik } from 'formik'
 import { useTranslation } from 'react-i18next'
-import { useGoogleLogin } from '@react-oauth/google'
 import * as Yup from 'yup'
 // import VectorSignUp from '@src/assets/images/auth/VectorSignUp.svg'
 import SwicthLanguage from '@src/components/SwicthLanguage/SwicthLanguage'
