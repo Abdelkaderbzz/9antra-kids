@@ -1,17 +1,28 @@
 @import '@assets/styles/abstracts';
 
 .container-map {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  height: 100svw;
-  width: 100svh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.start-img {
+    position: absolute;
+    bottom: 7rem;
+    right: 30rem;
+
+    &:hover {
+        cursor: pointer;
+        scale: 105%;
+    }
 }
 
 .image-map {
-  width: fit-content;
-  height: fit-content;
-  object-fit: cover;
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
 }
