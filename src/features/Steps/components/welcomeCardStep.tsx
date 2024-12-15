@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, Button } from 'antd'
+import { Card } from 'antd'
 
 interface WelcomeCardProps {
   name: string
@@ -26,9 +26,9 @@ export default function WelcomeCard({ name, onStart }: WelcomeCardProps) {
           Pour personnaliser votre expérience, nous vous poserons quelques questions.
         </p>
 
-        <Button onClick={onStart} className={'startButton'}>
+        <button onClick={onStart} className={'star-button-step'}>
           Commencer
-        </Button>
+        </button>
       </div>
     </Card>
   )

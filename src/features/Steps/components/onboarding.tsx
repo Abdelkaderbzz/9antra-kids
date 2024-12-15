@@ -91,7 +91,7 @@ export function OnboardingForm() {
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <WelcomeCard name="ahmed" onStart={() => console.log('hello world')} />
+        return <WelcomeCard name="ahmed" onStart={() => setCurrentStep((prev) => prev + 1)} />
       case 2:
         return (
           <CategorySelection

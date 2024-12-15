@@ -1,8 +1,7 @@
 // WelcomeCard.module.scss
 
 .card {
-  max-width: 600px;
-  width: 100%;
+  width:600px;
   padding: 2rem;
 }
 
@@ -10,16 +9,18 @@
   text-align: center;
 
   .title {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1.5;
 
     .greeting {
-      margin-bottom: 0.5rem;
+      font-size: 25px;
+      margin-bottom: 5px;
     }
 
     .name {
-      margin-top: 0.5rem;
+      font-size: 25px;
+      margin-top: 5px;
     }
   }
 
@@ -29,18 +30,15 @@
     padding-bottom: 15px;
   }
 
-  .startButton {
+  .star-button-step {
     width: 100%;
-    padding: 1.5rem; // py-6
-    font-size: 1.125rem; // text-lg
+    padding: 10px 15px; 
+    font-size: 16px; 
+    border-radius: 12px;
     background-color: #4169e1;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #3154c4; // hover:bg-[#3154c4]
-    }
   }
 }

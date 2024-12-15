@@ -1,0 +1,9 @@
+@forward './progressbar/progressbar';
+@forward './quizes/quizes';
+@forward './timer/timer';
+.quiz-page {
+  min-height: 100vh; // Equivalent to min-h-screen
+  background-color: #f9fafb; // Tailwind's bg-gray-50
+  padding-top: 3rem; // Equivalent to py-12
+  padding-bottom: 3rem;
+}

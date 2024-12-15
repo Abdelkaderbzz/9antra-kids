@@ -18,8 +18,8 @@ const Lessons = () => {
         <VideoLesson />
       </div>
       <div style={{ display: 'flex', justifyContent: 'end', gap: '10px' }}>
-        <Button variant="cancel">precedent</Button>
-        <Button variant="secondary">suivante</Button>
+        <Button size='xl' variant="cancel">precedent</Button>
+        <Button size='xl' variant="secondary">suivante</Button>
       </div>
     </div>
   )

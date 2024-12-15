@@ -1,0 +1,22 @@
+.timer-container {
+  position: relative;
+  width: 3rem; // Equivalent to w-12
+  height: 3rem; // Equivalent to h-12
+}
+
+.timer-border {
+  position: absolute;
+  inset: 0;
+  border: 4px solid #3b82f6; // Tailwind's border-blue-500
+  border-radius: 50%; // Equivalent to rounded-full
+}
+
+.timer-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125rem; // Equivalent to text-lg
+}
