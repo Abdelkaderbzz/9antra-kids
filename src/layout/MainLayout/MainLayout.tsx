@@ -1,5 +1,4 @@
 import { useState, Suspense } from 'react'
-import Sidebar from '@components/Sidebar/Sidebar'
 import Loader from '@src/components/Loader/Loader'
 import useWindowSize from '../../hook/useWindowSize'
 
@@ -9,7 +8,6 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   const [showSidebar, setShowSidebar] = useState(false)
-  const [collapseSidebar, _] = useState(false)
   const { width } = useWindowSize()
   return (
     <div className="main-layout">
