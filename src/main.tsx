@@ -5,7 +5,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 import AuthProvider from './context/AuthProvider'
 import { store } from './store/index'
 import App from './app/App'
-import "./app/index.css"
+import './app/index.css'
 import './app/index.scss'
 import './i18n'
 // import { PersistGate } from 'redux-persist/integration/react'

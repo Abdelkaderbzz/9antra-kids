@@ -58,7 +58,7 @@ const authSlice = createSlice({
           roles: ['user', 'editor'],
         },
       }
-      const { token, user } =mockData
+      const { token, user } = mockData
       message.success(`Welcome Back, ${user.name}`)
       setTokens(token)
       state.isAuthenticated = true

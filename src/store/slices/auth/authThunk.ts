@@ -11,10 +11,9 @@ type LoginPayload = {
 export const login = createAsyncThunk(
   'auth/login',
   async (loginData: LoginPayload, { rejectWithValue }) => {
-    try
-    {
+    try {
       // const response = await axiosInstance.post(`/api/login`, loginData)
-        return loginData
+      return loginData
       // if (response.status === 200) {
       //   return response.data
       // }

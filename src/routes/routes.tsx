@@ -73,7 +73,8 @@ const routes: RouteConfig[] = [
     path: '/map',
     component: lazy(() => import('@src/pages/Map')),
     layout: MainLayout,
-  }, {
+  },
+  {
     exact: true,
     // guard: AuthGuard,
     path: '/leagues',

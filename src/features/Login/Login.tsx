@@ -47,8 +47,6 @@ const Login = () => {
     },
   })
 
-
-
   return (
     <div className="auth_container">
       <header className="auth_header">
