@@ -16,8 +16,6 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const { isInitialised } = useSelector((state: RootState) => state.auth)
   const dispatch = useDispatch()
 
-
-
   useEffect(() => {
     if (!isMounted.current) {
       return
@@ -29,7 +27,6 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         if (true) {
           // const response = await axiosInstance.get('/api/profile')
           const mockData = {
-
             token: 'mockToken12345',
             user: {
               avatar: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=150',

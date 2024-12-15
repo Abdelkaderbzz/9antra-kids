@@ -1,5 +1,5 @@
-import { OnboardingForm } from "./components/onboarding"
-import StepsHeader from './components/stepsHeader';
+import { OnboardingForm } from './components/onboarding'
+import StepsHeader from './components/stepsHeader'
 
 const Steps = () => {
   return (
