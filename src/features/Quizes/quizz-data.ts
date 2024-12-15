@@ -18,5 +18,23 @@ export const questions: Question[] = [
     options: ['<link>', '<a>', '<href>', '<url>'],
     correctAnswer: 1,
   },
-  // Add more questions as needed
+  {
+    id: 3,
+    question: 'Which attribute is used in HTML to specify an image source?',
+    options: ['src', 'alt', 'href', 'source'],
+    correctAnswer: 0,
+  },
+  {
+    id: 4,
+    question: 'What does CSS stand for?',
+    options: [
+      'Cascading Style Sheets',
+      'Creative Style Syntax',
+      'Computer Style Sheets',
+      'Cascading Syntax Sheets',
+    ],
+    correctAnswer: 0,
+  },
+
 ]
+
