@@ -1,9 +1,11 @@
 @forward './NotFound/NotFound';
 @forward './Login/Login';
-@forward './Dashboard/Dashboard';
+@forward './Courses/Courses';
 @use './Settings/settings';
 @forward './Profile/profile';
 @forward './ForgetPassword';
 @forward './Reports';
 @forward './Clients/clients';
 @forward './Products/products';
+@forward './Steps/steps';
+@forward './lessons/Lessons'

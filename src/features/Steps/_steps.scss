@@ -1,0 +1,10 @@
+@forward './components/category-selection.scss';
+@forward './components/progress-bar.scss';
+@forward './components/onboarding.scss';
+@forward './components/welcomCard';
+.mainContainer {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

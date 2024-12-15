@@ -43,7 +43,7 @@ export const getSidebar = (t: TFunction<'translation', undefined>) => {
         key: 'dashboard',
         icon: Dashboard,
         title: t('dashboard'),
-        navigator: '/dashboard',
+        navigator: '/Courses',
       },
     ],
     bottom: [
