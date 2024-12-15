@@ -1,5 +1,5 @@
 .onboarding-form {
-  max-width: 40rem;
+  max-width: 75vw;
   margin: 0 auto;
   padding: 1.5rem;
 
@@ -8,7 +8,10 @@
   }
 
   .step-content {
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
 
@@ -33,6 +36,7 @@
     }
 
     p {
+      font-size: 16px;
       margin-top: 0.5rem;
       color: var(--muted-foreground);
     }
