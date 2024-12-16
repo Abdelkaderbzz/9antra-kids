@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 // import axiosInstance from '../utils/axios'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearTokens } from '../utils/token'
+import { clearTokens, getTokens } from '../utils/token'
 import useIsMountedRef from '../hook/useIsMountedRef'
 import { RootState } from '@src/store'
 import { initialise } from '@src/store/slices/auth/authSlice'
@@ -23,8 +23,8 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 
     async function fetchUser() {
       try {
-        // const { access_token } = getTokens()
-        if (true) {
+        const { access_token } = getTokens()
+        if (access_token) {
           // const response = await axiosInstance.get('/api/profile')
           const mockData = {
             token: 'mockToken12345',
@@ -39,7 +39,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
               roles: ['user', 'editor'],
             },
           }
-          if (true) {
+          if (access_token) {
             const user = mockData.user
             dispatch(initialise({ isAuthenticated: true, user }))
           } else {

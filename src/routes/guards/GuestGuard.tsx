@@ -12,7 +12,7 @@ const GuestGuard = ({ children }: MainLayoutProps) => {
   const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated)
 
   return isAuthenticated ? (
-    <Navigate to={token ? `/switch?token=${token}` : `/courses`} />
+    <Navigate to={token ? `/switch?token=${token}` : `/steps`} />
   ) : (
     children
   )

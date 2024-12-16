@@ -120,9 +120,9 @@ export function Quiz() {
                 }`}
                 onClick={() => handleAnswer(index)}
               >
-                <div className="quiz__option-content">
-                  <span>{option}</span>
-                  <span>{index + 1}</span>
+                <div style={{ fontSize:'16px'}} className="quiz__option-content">
+                  <span style={{ fontSize: '16px' }} >{option}</span>
+                  <span style={{ fontSize: '16px' }} >{index + 1}</span>
                 </div>
               </Card>
             </motion.div>
