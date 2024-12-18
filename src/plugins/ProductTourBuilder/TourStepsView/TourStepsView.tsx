@@ -9,9 +9,9 @@ import { TbSquareRoundedArrowRightFilled } from 'react-icons/tb'
 import TourSettings from '../TourSettings/TourSettings'
 
 interface ITourStepsView {
-  tourBuilderMode: 'starter' | 'stepEdit' | 'selector' | 'tourSteps'
+  tourBuilderMode: 'starter' | 'stepEdit' | 'selector' | 'tourSteps'| 'preview'
   tourBuilderState: TourBuilderState
-  setTourBuilderMode: Dispatch<SetStateAction<'starter' | 'stepEdit' | 'selector' | 'tourSteps'>>
+  setTourBuilderMode: Dispatch<SetStateAction<'starter' | 'stepEdit' | 'selector' | 'tourSteps'|'preview' >>
   setTourBuilderState: Dispatch<SetStateAction<TourBuilderState>>
 }
 const TourStepsView = ({
@@ -80,7 +80,7 @@ const TourStepsView = ({
                 >
                   {tourBuilderState.steps.map((step, index) => {
                     return (
-                      <Draggable key={step.id} draggableId={step.id} index={index}>
+                      <Draggable  key={step.id} draggableId={step.id} index={index}>
                         {(provided) => (
                           <div
                             ref={provided.innerRef}

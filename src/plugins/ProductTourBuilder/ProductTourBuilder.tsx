@@ -20,7 +20,7 @@ function ProductTourBuilder() {
   const [elementSelect, setElementSelect] = useState<Ioverlay>()
   const [hovredElement, setHovredElement] = useState('#main')
   const [tourBuilderMode, setTourBuilderMode] = useState<
-    'starter' | 'stepEdit' | 'selector' | 'tourSteps'
+    'starter' | 'stepEdit' | 'selector' | 'tourSteps' | 'preview'
   >(() => {
     const savedTourBuilderMode = sessionStorage.getItem(
       'taki-popups-snippet__intersection-last-composition-mode',

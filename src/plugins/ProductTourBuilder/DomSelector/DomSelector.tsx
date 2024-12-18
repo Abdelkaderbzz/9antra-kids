@@ -60,39 +60,62 @@ export const DOMSelector: React.FC<DOMSelectorProps> = ({ onSelect, onHover }) =
     }
   }, [highlightedElement, onSelect, updateOverlay])
 
-  const generateUniqueSelector = (element: Element): string => {
+  const generateUniqueSelector = (element: Element): string =>
+  {
     // Try ID first
-    if (element.id) {
-      return `#${element.id}`
+    if (element.id)
+    {
+      return `#${CSS.escape(element.id)}`;
     }
 
     // Try unique class combination
-    const classes = Array.from(element.classList)
-    if (classes.length > 0) {
-      const selector = `.${classes.join('.')}`
-      if (document.querySelectorAll(selector).length === 1) {
-        return selector
+    const classes = Array.from(element.classList);
+    if (classes.length > 0)
+    {
+      const uniqueClass = classes.find(cls => document.querySelectorAll(`.${cls}`).length === 1);
+      if (uniqueClass)
+      {
+        return `.${CSS.escape(uniqueClass)}`;
+      }
+      const classSelector = `.${classes.map(CSS.escape).join('.')}`;
+      if (document.querySelectorAll(classSelector).length === 1)
+      {
+        return classSelector;
       }
     }
 
     // Generate path with nth-child
-    let path = []
-    let current = element
-    while (current && current !== document.body) {
-      let selector = current.tagName.toLowerCase()
-      if (current.parentElement) {
-        const siblings = Array.from(current.parentElement.children)
-        const index = siblings.indexOf(current) + 1
-        if (siblings.length > 1) {
-          selector += `:nth-child(${index})`
+    let path: string[] = [];
+    let current: Element | null = element;
+    let depth = 0;
+    const MAX_DEPTH = 5;
+
+    while (current && current !== document.body && depth < MAX_DEPTH)
+    {
+      let selector = current.tagName.toLowerCase();
+      if (current.parentElement)
+      {
+        const siblings = Array.from(current.parentElement.children);
+        const index = siblings.indexOf(current) + 1;
+        if (siblings.length > 1)
+        {
+          selector += `:nth-child(${index})`;
         }
       }
-      path.unshift(selector)
-      current = current.parentElement as Element
+      path.unshift(selector);
+      current = current.parentElement;
+      depth++;
     }
 
-    return path.join(' > ')
-  }
+    const fullSelector = path.join(' > ');
+    if (document.querySelectorAll(fullSelector).length === 1)
+    {
+      return fullSelector;
+    }
+
+    // If no unique selector, return the full path or fallback
+    return fullSelector || 'body';
+  };
 
   return (
     <>

@@ -1,3 +1,4 @@
+@import '@assets/styles/abstracts';
 .tour-step-edit-mode-tool-bar {
   display: flex;
   gap: 10px;
@@ -40,4 +41,24 @@
   text-transform: capitalize;
   color: rgb(26, 105, 183);
   font-weight: 500;
+}
+
+.tour-step-preview-header {
+  @include flexbox(row, start, center);
+  gap: 8px;
+
+  .tour-creater-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+
+  }
+}
+.tour-preview-step-content{
+  @include flexbox(row, start, start);
+  font-size: 14px;
 }

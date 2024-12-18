@@ -3,18 +3,20 @@ import Joyride from 'react-joyride'
 
 import { ReactComponent as PopupsLogo } from './../../assets/popupsLogo.svg'
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import { IoExitOutline, IoSettings } from 'react-icons/io5'
 import { MdDone } from 'react-icons/md'
 import { TourBuilderState } from '../types'
 
 import { ICurrentStateContent } from '../ProductTourBuilder'
 import Button from '@src/components/Button/Button'
+import { Avatar } from 'antd'
 
-interface ITourBuilderStarter {
-  setTourBuilderMode: Dispatch<SetStateAction<'starter' | 'stepEdit' | 'selector' | 'tourSteps'>>
+interface ITourBuilderStarter
+{
+  setTourBuilderMode: Dispatch<SetStateAction<'starter' | 'stepEdit' | 'selector' | 'tourSteps' | 'preview'>>
   setIsVisible: Dispatch<SetStateAction<boolean>>
-  tourBuilderMode: 'starter' | 'stepEdit' | 'selector' | 'tourSteps'
+  tourBuilderMode: 'starter' | 'stepEdit' | 'selector' | 'tourSteps' | 'preview'
   hovredElement: string
   setElementSelect: any
   setTourBuilderState: Dispatch<SetStateAction<TourBuilderState>>
@@ -32,26 +34,31 @@ const TourBuilderStarter = ({
   hovredElement,
   setIsVisible,
   setTourBuilderMode,
-}: ITourBuilderStarter) => {
-  const [isPreview, setisPreview] = useState(false)
-  const openTourStepsView = () => {
+}: ITourBuilderStarter) =>
+{
+  const openTourStepsView = () =>
+  {
     setElementSelect()
     setTourBuilderMode('tourSteps')
   }
-  const handlePointSomeWhereElse = () => {
+  const handlePointSomeWhereElse = () =>
+  {
     setElementSelect()
     setTourBuilderMode('selector')
+    setCurrentStepContent({ progression_behavior: 0, button_text: null, description: '' })
   }
   const handleCancelTourStepsView = async () =>
   {
     if (window.opener)
     {
-      window.opener.postMessage({tourBuilderSteps:tourBuilderState}, '*');
+      window.opener.postMessage({ tourBuilderSteps: tourBuilderState }, '*');
     }
     window.close()
   }
-  const addNewStep = () => {
-    setTourBuilderState((prev) => {
+  const addNewStep = () =>
+  {
+    setTourBuilderState((prev) =>
+    {
       const prevSteps = prev.steps
       const newStep = {
         id: prevSteps.length < 1 ? '57384' : String(Number(prevSteps[prevSteps.length - 1].id) + 8),
@@ -83,7 +90,8 @@ const TourBuilderStarter = ({
     setTourBuilderMode('tourSteps')
   }
 
-  const LeftPartTourBuilder = () => {
+  const LeftPartTourBuilder = () =>
+  {
     if (tourBuilderMode === 'tourSteps') return <div></div>
     return (
       <>
@@ -96,14 +104,16 @@ const TourBuilderStarter = ({
             hovredElement
           ) : tourBuilderMode === 'stepEdit' ? (
             <ButtonsEditTourStep />
-          ) : (
-            'You can navigate to another page of your site if needed'
-          )}
+          ) : tourBuilderMode === 'preview' ?
+            <></> : (
+              'You can navigate to another page of your site if needed'
+            )}
         </div>
       </>
     )
   }
-  const ButtonsEditTourStep = () => {
+  const ButtonsEditTourStep = () =>
+  {
     return (
       <div className="tour-step-edit-mode-tool-bar">
         <span onClick={handlePointSomeWhereElse} className="point-somewhere-else">
@@ -118,7 +128,8 @@ const TourBuilderStarter = ({
       </div>
     )
   }
-  const RightPartTourBuilder = () => {
+  const RightPartTourBuilder = () =>
+  {
     if (tourBuilderMode === 'tourSteps')
       return (
         <div className="tour-steps-view-buttons">
@@ -137,23 +148,52 @@ const TourBuilderStarter = ({
       )
     else return <></>
   }
-  function transformTourData(inputArray: any) {
-    return inputArray.map((item: any) => ({
-      target: item.selector,
-      content: item.blocks[0]?.text || '',
-      placement: 'bottom',
-      style: {
-        arrowColor: '#f0f0f0',
-        backgroundColor: '#000',
-        color: '#fff',
-      },
-      disableBeacon: true,
-      spotlightPadding: 10,
-      buttonText: item.button_text || 'Next',
-      progressionBehavior: item.progression_behavior,
-      url: item.url,
-      order: item.order,
-    }))
+  const getElementFromSelector = (selector: string): Element | null =>
+  {
+    try
+    {
+      return document.querySelector(selector);
+    } catch (error)
+    {
+      console.error("Invalid selector:", selector, error);
+      return null;
+    }
+  }
+  function transformTourData(inputArray: any)
+  {
+    const resArr = inputArray.map((item: any) =>
+    {
+      const target = getElementFromSelector(item.selector);
+      console.log(target)
+      return {
+        title: <div className="tour-step-preview-header">
+          <Avatar className="tour-creater-avatar" />
+          <p>Amir from softylines</p>
+        </div>,
+        hideCloseButton: false,
+        disableOverlayClose: true,
+        event: 'click',
+        // hideFooter: true,
+        placement: 'bottom',
+        target: target,
+        content: <div className='tour-preview-step-content'>{ item.blocks[0]?.text || ''}</div> ,
+        style: {
+          arrowColor: '#f0f0f0',
+          backgroundColor: '#000',
+          color: '#fff',
+        },
+        disableBeacon: true,
+        spotlightPadding: 10,
+        buttonText: item.button_text || 'Next',
+      }
+    })
+    return resArr
+  }
+  const tourStepsConfig = transformTourData(tourBuilderState.steps)
+  console.log(tourStepsConfig)
+  const handlePreviewTour = () =>
+  {
+    setTourBuilderMode(tourBuilderMode === 'preview' ? 'tourSteps' : 'preview')
   }
 
   return (
@@ -162,9 +202,9 @@ const TourBuilderStarter = ({
         <PopupsLogo className="popups-logo" />
         <LeftPartTourBuilder />
       </div>
-      {tourBuilderState.steps.length > 0 && tourBuilderMode === 'tourSteps' && (
-        <button onClick={() => setisPreview(true)} className="tour-button-preview">
-          {isPreview ? (
+      {tourBuilderState.steps.length > 0 && ['tourSteps', 'preview'].includes(tourBuilderMode) && (
+        <button onClick={handlePreviewTour} className="tour-button-preview">
+          {tourBuilderMode === 'preview' ? (
             <>
               <IoExitOutline />
               exit
@@ -178,15 +218,23 @@ const TourBuilderStarter = ({
         </button>
       )}
       <Joyride
-        steps={transformTourData(tourBuilderState.steps)} // Pass the steps array to Joyride
-        run={isPreview} // Control whether the tour is running
-        continuous={true} // Enable continuous tour (goes through all steps)
-        showProgress={true} // Show progress indicator (step out of total)
-        showSkipButton={true} // Show a skip button
-        scrollToFirstStep={true} // Scroll to the first step automatically
-        callback={(data) => {
-          if (data.status === 'finished' || data.status === 'skipped') {
-            setisPreview(false) // Stop the tour when it's finished or skipped
+        styles={{
+          options: {
+            primaryColor: '#FC8353', textColor: '#000'
+          }
+        }}
+        steps={tourStepsConfig}
+        run={tourBuilderMode === 'preview'}
+        continuous={true}
+        showProgress={true}
+        showSkipButton={true}
+        scrollToFirstStep={true}
+        callback={(data) =>
+        {
+          console.log(data,'data')
+          if (data.status === 'finished' || data.status === 'skipped')
+          {
+            setTourBuilderMode('tourSteps')
           }
         }}
       />
