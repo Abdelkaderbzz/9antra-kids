@@ -1,0 +1,43 @@
+.tour-step-edit-mode-tool-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  .point-somewhere-else {
+    display: flex;
+    align-items: center;
+    padding: 6px 9px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #b9b6b647;
+    }
+  }
+
+  .advanced-settings {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 9px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #b9b6b647;
+    }
+  }
+}
+
+.tour-button-preview {
+  flex: 1;
+  min-height: 40px;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  text-transform: capitalize;
+  color: rgb(26, 105, 183);
+  font-weight: 500;
+}

@@ -1,0 +1,101 @@
+@import '@assets/styles/abstracts';
+
+.tour-settings-container {
+  width: 100%;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-settings-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tour-settings-section {
+  flex: 1;
+  min-width: 250px;
+  padding-right: 24px;
+  border-right: 1px solid #e5e7eb;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.design-tour {
+  width: 300px;
+  @include flexbox(column, start, start);
+  gap: 20px;
+
+  .input-group {
+    @include flexbox(column, start, start);
+  }
+
+  .url-label {
+    display: inline-block;
+    width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $text-color;
+    font-size: 13px;
+  }
+
+  .change-button {
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .new-badge {
+    background-color: #bfdbfe;
+    color: #1d4ed8;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+}
+
+.toggle-group {
+  margin-top: 12px;
+
+  .toggle-item {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 16px;
+
+    .toggle-label {
+      font-size: 13px;
+      line-height: 20px;
+      color: $text-color;
+      font-weight: 400;
+      max-width: 320px;
+    }
+
+    .label-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .info-icon {
+        font-size: 16px;
+        color: #6b7280;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '@assets/styles/abstracts';
+.tour__bottom-bar {
+  z-index: 999999999;
+  height: 24px;
+  transition: height 0.2s;
+  width: 48px;
+  bottom: 0;
+  left: 12px;
+  position: fixed;
+  background: $dark;
+  color: $light;
+  border-radius: 32px 32px 0 0;
+  cursor: pointer;
+
+  .tour-first-span {
+    margin-top: 12px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .tour-second-span {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .popups-logo-toggled {
+    width: 25px;
+    height: 25px;
+  }
+}
