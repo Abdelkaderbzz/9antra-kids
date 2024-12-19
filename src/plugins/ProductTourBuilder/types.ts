@@ -11,7 +11,6 @@ interface Selectors {
 }
 
 interface Step {
-  id: string
   blocks: Block[]
   selector: string | null
   selectors: Selectors

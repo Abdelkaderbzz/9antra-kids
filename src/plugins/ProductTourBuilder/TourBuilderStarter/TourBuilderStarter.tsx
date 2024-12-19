@@ -1,16 +1,13 @@
 import { FaChevronDown, FaPlay } from 'react-icons/fa6'
 import Joyride from 'react-joyride'
-
 import { ReactComponent as PopupsLogo } from './../../assets/popupsLogo.svg'
-
 import { Dispatch, SetStateAction } from 'react'
 import { IoExitOutline, IoSettings } from 'react-icons/io5'
 import { MdDone } from 'react-icons/md'
 import { TourBuilderState } from '../types'
-
 import { ICurrentStateContent } from '../ProductTourBuilder'
 import Button from '@src/components/Button/Button'
-import { Avatar } from 'antd'
+import { transformTourData } from './utils/transformTourData'
 
 interface ITourBuilderStarter
 {
@@ -61,7 +58,6 @@ const TourBuilderStarter = ({
     {
       const prevSteps = prev.steps
       const newStep = {
-        id: prevSteps.length < 1 ? '57384' : String(Number(prevSteps[prevSteps.length - 1].id) + 8),
         blocks: [
           {
             type: 'paragraph',
@@ -148,49 +144,8 @@ const TourBuilderStarter = ({
       )
     else return <></>
   }
-  const getElementFromSelector = (selector: string): Element | null =>
-  {
-    try
-    {
-      return document.querySelector(selector);
-    } catch (error)
-    {
-      console.error("Invalid selector:", selector, error);
-      return null;
-    }
-  }
-  function transformTourData(inputArray: any)
-  {
-    const resArr = inputArray.map((item: any) =>
-    {
-      const target = getElementFromSelector(item.selector);
-      console.log(target)
-      return {
-        title: <div className="tour-step-preview-header">
-          <Avatar className="tour-creater-avatar" />
-          <p>Amir from softylines</p>
-        </div>,
-        hideCloseButton: false,
-        disableOverlayClose: true,
-        event: 'click',
-        // hideFooter: true,
-        placement: 'bottom',
-        target: target,
-        content: <div className='tour-preview-step-content'>{ item.blocks[0]?.text || ''}</div> ,
-        style: {
-          arrowColor: '#f0f0f0',
-          backgroundColor: '#000',
-          color: '#fff',
-        },
-        disableBeacon: true,
-        spotlightPadding: 10,
-        buttonText: item.button_text || 'Next',
-      }
-    })
-    return resArr
-  }
+
   const tourStepsConfig = transformTourData(tourBuilderState.steps)
-  console.log(tourStepsConfig)
   const handlePreviewTour = () =>
   {
     setTourBuilderMode(tourBuilderMode === 'preview' ? 'tourSteps' : 'preview')

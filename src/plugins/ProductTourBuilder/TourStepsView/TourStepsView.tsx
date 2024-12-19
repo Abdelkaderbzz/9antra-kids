@@ -37,10 +37,10 @@ const TourStepsView = ({
     }))
   }
 
-  const deleteStep = (id: string) => {
+  const deleteStep = (index: number) => {
     setTourBuilderState((prev) => ({
       ...prev,
-      steps: prev.steps.filter((step) => step.id !== id),
+      steps: prev.steps.filter((_,stepIndex) => stepIndex !== index),
     }))
   }
   if (tourBuilderMode !== 'tourSteps') return null
@@ -80,7 +80,7 @@ const TourStepsView = ({
                 >
                   {tourBuilderState.steps.map((step, index) => {
                     return (
-                      <Draggable  key={step.id} draggableId={step.id} index={index}>
+                      <Draggable  key={index} draggableId={String(index+99)} index={index}>
                         {(provided) => (
                           <div
                             ref={provided.innerRef}
@@ -103,7 +103,7 @@ const TourStepsView = ({
                                         <MdDragIndicator />
                                       </span>
                                       <span
-                                        onClick={() => deleteStep(step.id)}
+                                        onClick={() => deleteStep(index)}
                                         className="delete-icon"
                                       >
                                         <BsTrash3Fill />
